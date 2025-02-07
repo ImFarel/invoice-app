@@ -11,9 +11,8 @@ import '@/app/globals.css'
 import '@assets/iconify-icons/generated-icons.css'
 
 export const metadata = {
-  title: 'Invoice App',
-  description:
-    'Invoice App'
+  title: 'InvoiceHub',
+  description: 'InvoiceHub'
 }
 
 const RootLayout = ({ children }: ChildrenType) => {

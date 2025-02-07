@@ -10,8 +10,7 @@
     "lint": "next lint",
     "lint:fix": "next lint --fix",
     "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",
-    "build:icons": "tsx src/assets/iconify-icons/bundle-icons-css.ts",
-    "postinstall": "npm run build:icons"
+    "build:icons": "tsx src/assets/iconify-icons/bundle-icons-css.ts"
   },
   "dependencies": {
     "@emotion/cache": "11.13.0",
@@ -22,10 +21,14 @@
     "@mui/lab": "5.0.0-alpha.172",
     "@mui/material": "5.16.4",
     "@mui/material-nextjs": "5.16.4",
+    "@mui/utils": "^6.3.0",
+    "@prisma/client": "^6.3.1",
     "classnames": "2.5.1",
+    "date-fns": "^4.1.0",
     "next": "14.2.5",
     "react": "18.3.1",
     "react-colorful": "5.6.1",
+    "react-datepicker": "^8.0.0",
     "react-dom": "18.3.1",
     "react-hook-form": "^7.54.2",
     "react-perfect-scrollbar": "1.5.8",
@@ -52,12 +55,14 @@
     "postcss": "8.4.40",
     "postcss-styled-syntax": "0.6.4",
     "prettier": "3.3.3",
+    "prisma": "^6.3.1",
     "stylelint": "16.7.0",
     "stylelint-use-logical-spec": "5.0.1",
     "stylis": "4.3.2",
     "stylis-plugin-rtl": "2.1.1",
     "tailwindcss": "3.4.6",
     "tailwindcss-logical": "3.0.1",
+    "ts-node": "^10.9.2",
     "tsx": "4.16.2",
     "typescript": "5.5.4"
   },
@@ -66,5 +71,9 @@
   },
   "overrides": {
     "rimraf": "^5.0.7"
+  },
+  "prisma": {
+    "schema": "./src/prisma/schema.prisma",
+    "seed": "ts-node --compiler-options {\"module\":\"CommonJS\"} src/prisma/seed.ts"
   }
 }

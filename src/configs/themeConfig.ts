@@ -50,21 +50,21 @@ export type Config = {
 }
 
 const themeConfig: Config = {
-  templateName: 'Invoice App',
-  homePageUrl: '/home',
-  settingsCookieName: 'Invoice App',
-  mode: 'system', // 'system', 'light', 'dark'
+  templateName: 'InvoiceHub',
+  homePageUrl: '/invoices',
+  settingsCookieName: 'InvoiceHub',
+  mode: 'light', // 'system', 'light', 'dark'
   skin: 'default', // 'default', 'bordered'
-  semiDark: false, // true, false
+  semiDark: true, // true, false
   layout: 'vertical', // 'vertical', 'collapsed', 'horizontal'
   layoutPadding: 24, // Common padding for header, content, footer layout components (in px)
   compactContentWidth: 1440, // in px
   navbar: {
     type: 'fixed', // 'fixed', 'static'
     contentWidth: 'compact', // 'compact', 'wide'
-    floating: true, //! true, false (This will not work in the Horizontal Layout)
-    detached: true, //! true, false (This will not work in the Horizontal Layout or floating navbar is enabled)
-    blur: true // true, false
+    floating: false, //! true, false (This will not work in the Horizontal Layout)
+    detached: false, //! true, false (This will not work in the Horizontal Layout or floating navbar is enabled)
+    blur: false // true, false
   },
   contentWidth: 'compact', // 'compact', 'wide'
   footer: {

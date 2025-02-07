@@ -14,7 +14,6 @@ import Providers from '@components/Providers'
 import Navigation from '@components/layout/vertical/Navigation'
 import Header from '@components/layout/horizontal/Header'
 import Navbar from '@components/layout/vertical/Navbar'
-import VerticalFooter from '@components/layout/vertical/Footer'
 import HorizontalFooter from '@components/layout/horizontal/Footer'
 import ScrollToTop from '@core/components/scroll-to-top'
 
@@ -32,11 +31,7 @@ const Layout = async ({ children }: ChildrenType) => {
       <LayoutWrapper
         systemMode={systemMode}
         verticalLayout={
-          <VerticalLayout
-            navigation={<Navigation mode={mode} systemMode={systemMode} />}
-            navbar={<Navbar />}
-            footer={<VerticalFooter />}
-          >
+          <VerticalLayout navigation={<Navigation mode={mode} systemMode={systemMode} />} navbar={<Navbar />}>
             {children}
           </VerticalLayout>
         }

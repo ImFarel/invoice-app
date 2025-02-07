@@ -29,7 +29,7 @@ const TextFieldStyled = styled(TextField)<TextFieldProps>(({ theme }) => ({
     }
   },
   '& .MuiInputBase-root': {
-    backgroundColor: 'transparent !important',
+    backgroundColor: 'transparent',
     border: `1px solid var(--mui-palette-customColors-inputBorder)`,
     '&:not(.Mui-focused):not(.Mui-disabled):not(.Mui-error):hover': {
       borderColor: 'var(--mui-palette-action-active)'
@@ -133,8 +133,10 @@ const TextFieldStyled = styled(TextField)<TextFieldProps>(({ theme }) => ({
   },
 
   '& .MuiInputBase-input': {
+    backgroundColor: theme.palette.background.paper,
     '&:not(textarea).MuiInputBase-inputSizeSmall': {
-      padding: '7.25px 14px'
+      padding: '7.25px 14px',
+      borderRadius: 'var(--mui-shape-borderRadius)'
     },
     '&:not(.MuiInputBase-readOnly):not([readonly])::placeholder': {
       transition: theme.transitions.create(['opacity', 'transform'], {
@@ -227,6 +229,7 @@ const TextFieldStyled = styled(TextField)<TextFieldProps>(({ theme }) => ({
   '& .MuiAutocomplete-inputRoot': {
     display: 'flex',
     gap: '0.25rem',
+    backgroundColor: theme.palette.background.paper,
     '& .MuiAutocomplete-tag': {
       margin: 0
     }
