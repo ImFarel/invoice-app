@@ -50,7 +50,7 @@ This will start the server on `http://localhost:3000`.
 
 The application is already deployed and can be accessed at the following URL:
 
-[https://example.com](https://example.com)
+[https://seahorse-app-czpgg.ondigitalocean.app/invoices](https://seahorse-app-czpgg.ondigitalocean.app/invoices)
 
 ## Environment Variables
 
